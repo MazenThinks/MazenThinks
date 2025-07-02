@@ -10,6 +10,7 @@
   🏆 Completed PickPay – A+ Grade, Top 2 Project, International Event Nominee<br>
 </p>
 
+<br/>
 
 <h2 align="center">🛠️ Tech Stack</h2>
 
@@ -47,7 +48,9 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" height="60" alt="npm" />
 </p>
 
-<h2 align="center">📈 GitHub Stats</h2>
+<br/>
+
+<h2 align="center">📈 Stats</h2>
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=MazenThinks&show_icons=true&theme=tokyonight&hide_border=true" />
