@@ -15,7 +15,6 @@
 <h2 align="center">🛠️ Tech Stack</h2>
 
 <!-- Frontend -->
-<h4 align="center">Frontend</h4>
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="60" alt="HTML5" />&emsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="60" alt="CSS3" />&emsp;
@@ -24,24 +23,24 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="60" alt="Bootstrap" />&emsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="60" alt="React" />
 </p>
+<br/>
 
 <!-- Backend -->
-<h4 align="center">Backend</h4>
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="60" alt="Node.js" />&emsp;
   <img src="https://img.icons8.com/ios/100/express-js.png" height="60" alt="Express.js" />&emsp;
   <img src="https://axios-http.com/assets/logo.svg" alt="Axios" height="50" />
 </p>
+<br/>
 
 <!-- Database -->
-<h4 align="center">Database</h4>
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="60" alt="PostgreSQL" />&emsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="60" alt="MongoDB" />
 </p>
+<br/>
 
 <!-- Tools & Others -->
-<h4 align="center">Tools & Other</h4>
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="60" alt="Git" />&emsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="60" alt="GitHub" />&emsp;
