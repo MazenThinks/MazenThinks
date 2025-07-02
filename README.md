@@ -2,28 +2,14 @@
 
 <p align="center">
   💻 Full Stack Developer (React, Node.js, PostgreSQL)<br>
-  🚀 Turning complex ideas into clean, responsive, and usable web applications
-  <p align="center">
-  <a href="https://www.linkedin.com/in/mazenmagdyy/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" height="40" alt="LinkedIn" />
-  </a>
-  &emsp;
-  <a href="mailto:mazenmagdy190.mm@gmail.com" target="_blank">
-    <img src="https://img.icons8.com/color/48/gmail--v1.png" height="40" alt="Gmail" />
-  </a>
+  🚀 Passionate about writing clean code and building fast, responsive user interfaces
 </p>
-
----
-
-<h2 align="center">🧠 About Me</h2>
 
 <p align="center">
-🎓 Bachelor's Degree in Computer Science <br>
-🏆 Completed PickPay – A+ Grade, Top 2 Project, International Event Nominee <br>
-🤝 Open to freelance, collaborations, and tech challenges
+  🎓 Bachelor's Degree in Computer Science<br>
+  🏆 Completed PickPay – A+ Grade, Top 2 Project, International Event Nominee<br>
 </p>
 
----
 
 <h2 align="center">🛠️ Tech Stack</h2>
 
@@ -60,8 +46,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="60" alt="GitHub" />&emsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" height="60" alt="npm" />
 </p>
-
----
 
 <h2 align="center">📈 GitHub Stats</h2>
 
