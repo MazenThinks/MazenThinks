@@ -50,8 +50,6 @@
 
 <br/>
 
-<h2 align="center">📈 Stats</h2>
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=MazenThinks&show_icons=true&theme=tokyonight&hide_border=true" />
 </p>
