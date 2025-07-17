@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Mazen Magdy</h1>
 
 <p align="center">
-  💻 Full Stack Developer (React, Node.js, PostgreSQL)<br>
+  💻 Front End Developer (ReactJS, NextJS, Tailwind CSS)<br>
   🚀 Passionate about writing clean code and building fast, responsive user interfaces
 </p>
 
