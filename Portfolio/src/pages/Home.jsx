@@ -159,7 +159,7 @@ const Home = () => {
                     <div className="max-w-6xl mx-auto space-y-24">
                         {/* FlowTask */}
                         <a
-                            href="https://example.com/flowtask"
+                            href="https://myflowtask.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group block"
@@ -189,7 +189,7 @@ const Home = () => {
 
                         {/* Scheduly */}
                         <a
-                            href="https://example.com/scheduly"
+                            href="https://myscheduly.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group block"
@@ -218,7 +218,7 @@ const Home = () => {
 
                         {/* Verveo */}
                         <a
-                            href="https://example.com/verveo"
+                            href="https://verveo.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group block"
