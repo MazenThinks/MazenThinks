@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply border-neutral-200 dark:border-neutral-900;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    html.dark body {
+        @apply bg-neutral-950 text-white antialiased;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+        background-size: 100px 100px;
+        transition: background-color 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+            color 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+            background-image 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html.light body {
+        @apply bg-white text-neutral-950 antialiased;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+        background-size: 100px 100px;
+        transition: background-color 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+            color 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+            background-image 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+}
+
+@layer components {
+    .container-custom {
+        @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+    }
+
+    .custom-cursor {
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0;
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+            opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html.dark .custom-cursor {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .section-padding {
+        @apply py-20 sm:py-24 lg:py-32;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-4 text-base font-bold transition-all duration-300 focus:outline-none;
+        @apply bg-neutral-950 text-white hover:bg-neutral-800;
+        @apply dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-200;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-8 py-4 text-base font-bold bg-transparent border-2 transition-all duration-300 focus:outline-none;
+        @apply border-neutral-950 text-neutral-950 hover:bg-neutral-950 hover:text-white;
+        @apply dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-950;
+    }
+
+    .heading-xl {
+        @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+    }
+
+    .heading-lg {
+        @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+    }
+
+    .heading-md {
+        @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
+    }
+
+    .text-body {
+        @apply text-base sm:text-lg text-neutral-400 leading-relaxed;
+    }
+
+    .text-highlight {
+        @apply text-white font-bold;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .animate-delay-100 {
+        animation-delay: 0.15s;
+    }
+
+    .animate-delay-200 {
+        animation-delay: 0.3s;
+    }
+
+    .animate-delay-300 {
+        animation-delay: 0.45s;
+    }
+
+    .animate-delay-400 {
+        animation-delay: 0.6s;
+    }
+
+    .animate-delay-500 {
+        animation-delay: 0.75s;
+    }
+
+    .animate-hero-entrance {
+        animation: heroEntrance 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .animate-hero-text {
+        animation: heroText 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+
+    .animate-page-enter {
+        animation: pageEnter 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .animate-scroll-cue {
+        animation: scrollCue 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+
+    .animate-grid-reveal {
+        animation: gridReveal 2s cubic-bezier(0.16, 1, 0.3, 1) 1.8s both;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollCue {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(8px);
+    }
+}
+
+@keyframes gridReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
