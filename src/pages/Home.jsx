@@ -28,7 +28,7 @@ const Home = () => {
                         <div className="space-y-4 relative">
                             {/* Fixed Grid Around Name */}
                             <div className="absolute -inset-x-2 -inset-y-16 opacity-0 animate-grid-reveal pointer-events-none" style={{
-                                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px)',
+                                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px)',
                                 backgroundSize: '100px 100px',
                                 backgroundPosition: '50% 50%',
                                 maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent), linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
@@ -37,7 +37,7 @@ const Home = () => {
                                 WebkitMaskComposite: 'source-in'
                             }}></div>
                             <div className="absolute -inset-x-2 -inset-y-20 opacity-0 animate-grid-reveal pointer-events-none dark:block hidden" style={{
-                                backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)',
+                                backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px)',
                                 backgroundSize: '100px 100px',
                                 backgroundPosition: '50% 50%',
                                 maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent), linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
