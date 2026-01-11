@@ -23,9 +23,14 @@ const Home = () => {
             {/* Hero Section */}
             <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
                 <div className="container-custom text-center relative z-10">
-                    <div className="space-y-16 animate-hero-entrance">
+                    <div className="space-y-16">
                         {/* Name */}
-                        <div className="space-y-4 relative">
+                        <div className="space-y-6 relative">
+                            {/* Radial Glow - Behind Everything */}
+                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none opacity-0 animate-glow-reveal">
+                                <div className="absolute inset-0 bg-gradient-radial from-neutral-200/40 via-neutral-200/10 to-transparent dark:from-neutral-800/30 dark:via-neutral-800/5 dark:to-transparent blur-3xl"></div>
+                            </div>
+
                             {/* Fixed Grid Around Name */}
                             <div className="absolute -inset-x-2 -inset-y-16 opacity-0 animate-grid-reveal pointer-events-none" style={{
                                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px)',
@@ -46,20 +51,25 @@ const Home = () => {
                                 WebkitMaskComposite: 'source-in'
                             }}></div>
 
-                            <h1 className="font-display font-black text-[clamp(3.5rem,12vw,10rem)] text-neutral-950 dark:text-white tracking-[-0.02em] leading-[0.9] select-none transition-colors duration-600 relative" style={{
+                            <h1 className="font-display font-black text-[clamp(3.5rem,12vw,10rem)] text-neutral-950 dark:text-white tracking-[-0.02em] leading-[0.9] select-none transition-colors duration-600 relative opacity-0 animate-name-reveal" style={{
                                 textAlign: 'center',
                                 position: 'relative',
                                 top: '0.5px'
                             }}>
                                 MAZEN MAGDY
                             </h1>
-                            <p className="text-base text-neutral-500 dark:text-neutral-500 tracking-wide font-light transition-colors duration-600">
-                                Defining tomorrow's interactions, one component at a time.
-                            </p>
+                            <div className="space-y-3 max-w-2xl mx-auto">
+                                <p className="text-lg text-neutral-600 dark:text-neutral-400 tracking-wide font-light leading-relaxed transition-colors duration-600 opacity-0 animate-manifesto-reveal">
+                                    Defining tomorrow's interactions, one component at a time.
+                                </p>
+                                <p className="text-xs uppercase tracking-[0.25em] text-neutral-400 dark:text-neutral-600 font-medium opacity-0 animate-role-reveal">
+                                    Frontend Developer · React & UI Systems
+                                </p>
+                            </div>
                         </div>
 
                         {/* Social Links */}
-                        <div className="flex flex-col items-center justify-center gap-3 animate-fade-in-up">
+                        <div className="flex flex-col items-center justify-center gap-3 opacity-0 animate-social-reveal">
                             {/* First Row - Active Links */}
                             <div className="flex flex-wrap items-center justify-center gap-4">
                                 <a
@@ -107,11 +117,6 @@ const Home = () => {
                             <div className="flex flex-wrap items-center justify-center gap-4">
                                 {/* Fiverr - Link Ready */}
                                 <div className="flex items-center gap-2 text-neutral-400 dark:text-neutral-600 opacity-50 cursor-not-allowed" data-href="">
-                                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                        <circle cx="3.5" cy="3.5" r="1.5" />
-                                        <circle cx="8.5" cy="3.5" r="1.5" />
-                                        <path d="M11.5,0v3h3V0H11.5z M0,6v2.5h7.5V6H0z M0,10v2.5h5V10H0z M0,14v2.5h7.5V14H0z M0,18v2.5h5V18H0z M10,6v16h3V6H10z M15,6v8.5h3V6H15z M15,16v6h3v-6H15z M20,6v8.5h3V6H20z" />
-                                    </svg>
                                     <span className="text-xs uppercase tracking-[0.2em] font-medium">Fiverr</span>
                                 </div>
                                 {/* Upwork - Link Ready */}
@@ -166,7 +171,7 @@ const Home = () => {
                         >
                             <div className="grid lg:grid-cols-2 gap-16 items-center cursor-pointer">
                                 <div className="space-y-4 lg:order-1">
-                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:translate-x-2 transition-transform duration-500">
+                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:tracking-wide group-hover:scale-105 group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-all duration-500 origin-left">
                                         FlowTask
                                     </h3>
                                     <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
@@ -181,7 +186,7 @@ const Home = () => {
                                 </div>
                                 <div className="lg:order-2">
                                     <div className="relative w-full overflow-hidden rounded-lg border-2 border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xl group-hover:shadow-3xl group-hover:border-neutral-300 dark:group-hover:border-neutral-700 transition-all duration-500">
-                                        <img src={FlowTaskMockup} alt="FlowTask" className="aspect-[16/10] w-full h-full object-cover" />
+                                        <img src={FlowTaskMockup} alt="FlowTask" className="aspect-[16/10] w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +201,7 @@ const Home = () => {
                         >
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 <div className="space-y-4 lg:order-2">
-                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:translate-x-2 transition-transform duration-500">
+                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:tracking-wide group-hover:scale-105 group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-all duration-500 origin-left">
                                         Scheduly
                                     </h3>
                                     <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
@@ -210,22 +215,26 @@ const Home = () => {
                                 </div>
                                 <div className="lg:order-1">
                                     <div className="relative w-full overflow-hidden rounded-lg border-2 border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xl group-hover:shadow-3xl group-hover:border-neutral-300 dark:group-hover:border-neutral-700 transition-all duration-500">
-                                        <img src={SchedulyMockup} alt="Scheduly" className="aspect-[16/10] w-full h-full object-cover" />
+                                        <img src={SchedulyMockup} alt="Scheduly" className="aspect-[16/10] w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     </div>
                                 </div>
                             </div>
                         </a>
 
-                        {/* Verveo */}
+                        {/* Verveo - Featured */}
                         <a
                             href="https://verveo.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block"
+                            className="group block relative"
                         >
-                            <div className="grid lg:grid-cols-2 gap-16 items-center cursor-pointer">
+                            <div className="absolute -inset-6 bg-neutral-50 dark:bg-neutral-900/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                            <div className="grid lg:grid-cols-2 gap-16 items-center cursor-pointer relative">
                                 <div className="space-y-4 lg:order-1">
-                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:translate-x-2 transition-transform duration-500">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-600 font-bold px-2 py-1 border border-neutral-300 dark:border-neutral-700 rounded">Featured Project</span>
+                                    </div>
+                                    <h3 className="font-project text-6xl lg:text-7xl font-bold text-neutral-950 dark:text-white tracking-normal leading-none group-hover:tracking-wide group-hover:scale-105 group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-all duration-500 origin-left">
                                         Verveo
                                     </h3>
                                     <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
@@ -240,8 +249,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="lg:order-2">
-                                    <div className="relative w-full overflow-hidden rounded-lg border-2 border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xl group-hover:shadow-3xl group-hover:border-neutral-300 dark:group-hover:border-neutral-700 transition-all duration-500">
-                                        <img src={VerveoMockup} alt="Verveo" className="aspect-[16/10] w-full h-full object-cover" />
+                                    <div className="relative w-full overflow-hidden rounded-lg border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 shadow-2xl group-hover:shadow-3xl group-hover:border-neutral-400 dark:group-hover:border-neutral-600 transition-all duration-500 ring-1 ring-neutral-200/50 dark:ring-neutral-700/50">
+                                        <img src={VerveoMockup} alt="Verveo" className="aspect-[16/10] w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     </div>
                                 </div>
                             </div>
