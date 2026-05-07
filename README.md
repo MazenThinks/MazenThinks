@@ -31,17 +31,9 @@ I’m a Full Stack Developer focused on building clean, performant, and scalable
 
 ## 🌐 Connect With Me
 
-<p align="left">
-  <a href="https://linkedin.com/in/mazenmagdyy/">
-    <img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="https://mazenmagdy.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel" />
-  </a>
-  <a href="mailto:mazenyassien.dev@gmail.com">
-    <img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail" />
-  </a>
-</p>
+- LinkedIn: https://linkedin.com/in/mazenmagdyy/
+- Portfolio: https://mazenmagdy.vercel.app/
+- Email: mazenyassien.dev@gmail.com
 
 ---
 
