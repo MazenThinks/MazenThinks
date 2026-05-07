@@ -1,64 +1,56 @@
-<h1 align="center">Hi 👋, I'm Mazen Magdy</h1>
+# Hi, I'm Mazen 👋
 
-<p align="center">
-  💻 Front End Developer (ReactJS, NextJS, Tailwind CSS)<br>
-  🚀 Passionate about writing clean code and building fast, responsive user interfaces
+```txt
+Full Stack Developer
+Computer Science Graduate
+Building modern web experiences
+```
+
+I build clean, scalable, and user-focused web applications across both frontend and backend technologies.
+
+## ⚡ Tech Stack
+
+### Frontend
+![React](https://img.shields.io/badge/React-111111?style=for-the-badge&logo=react)
+![Next JS](https://img.shields.io/badge/Next.js-111111?style=for-the-badge&logo=nextdotjs)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-111111?style=for-the-badge&logo=tailwindcss)
+![JavaScript](https://img.shields.io/badge/JavaScript-111111?style=for-the-badge&logo=javascript)
+![TypeScript](https://img.shields.io/badge/TypeScript-111111?style=for-the-badge&logo=typescript)
+
+### Backend
+![Node JS](https://img.shields.io/badge/Node.js-111111?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express-111111?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-111111?style=for-the-badge&logo=mongodb)
+![SQL](https://img.shields.io/badge/SQL-111111?style=for-the-badge&logo=mysql)
+![.NET](https://img.shields.io/badge/.NET-111111?style=for-the-badge&logo=dotnet)
+
+### Tools
+![Git](https://img.shields.io/badge/Git-111111?style=for-the-badge&logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github)
+![VS Code](https://img.shields.io/badge/VS_Code-111111?style=for-the-badge&logo=visualstudiocode)
+
+## 🚀 Current Focus
+- Building full stack applications
+- Learning advanced backend development with .NET
+- Improving APIs & system design
+- Exploring cybersecurity fundamentals
+
+## 🌐 Connect With Me
+<p align="left">
+  <a href="https://linkedin.com/in/mazenmagdyy/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="https://mazenmagdy.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel" />
+  </a>
+  <a href="mailto:mazenyassien.dev@gmail.com">
+    <img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail" />
+  </a>
 </p>
 
-<p align="center">
-  🎓 Bachelor's Degree in Computer Science<br>
-  🏆 Completed PickPay – A+ Grade, Top 2 Project, International Event Nominee<br>
-</p>
-
-<br/>
-
-<h2 align="center">🛠️ Tech Stack</h2>
-<br/>
-
-<!-- Frontend -->
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="60" alt="HTML5" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="60" alt="CSS3" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="60" alt="JavaScript" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" height="60" alt="jQuery" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="60" alt="Bootstrap" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="60" alt="React" />
-</p>
-<br/>
-
-<!-- Backend -->
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="60" alt="Node.js" />&emsp;
-  <img src="https://img.icons8.com/ios/100/express-js.png" height="60" alt="Express.js" />&emsp;
-  <img src="https://axios-http.com/assets/logo.svg" alt="Axios" height="50" />
-</p>
-<br/>
-
-<!-- Database -->
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="60" alt="PostgreSQL" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="60" alt="MongoDB" />
-</p>
-<br/>
-
-<!-- Tools & Others -->
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="60" alt="Git" />&emsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="60" alt="GitHub" />&emsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" height="60" alt="npm" />
-</p>
-
-<br/>
+---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MazenThinks&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20Views&color=111111&style=flat" />
 </p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MazenThinks&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
- ---
-
-<p align="center"><i>“Deja de esperar”</i></p>
 
