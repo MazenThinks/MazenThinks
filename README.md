@@ -51,6 +51,6 @@ I build clean, scalable, and user-focused web applications across both frontend 
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20Views&color=111111&style=flat" />
+  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile+Views&style=for-the-badge&color=111111" />
 </p>
 
