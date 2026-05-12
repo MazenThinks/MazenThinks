@@ -6,11 +6,7 @@ const ScrollToTop = () => {
 
     useEffect(() => {
         // Scroll to top instantly without smooth behavior to avoid conflicts with animations
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'instant'
-        });
+        window.scrollTo(0, 0);
     }, [pathname]);
 
     return null;

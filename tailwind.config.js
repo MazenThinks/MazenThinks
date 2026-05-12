@@ -8,39 +8,45 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: {
-                    50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    200: '#bae6fd',
-                    300: '#7dd3fc',
-                    400: '#38bdf8',
-                    500: '#0ea5e9',
-                    600: '#0284c7',
-                    700: '#0369a1',
-                    800: '#075985',
-                    900: '#0c4a6e',
+                surface: {
+                    deepest: '#0a0f1e',
+                    DEFAULT: '#111827',
+                    elevated: '#1e293b',
                 },
-                neutral: {
-                    50: '#fafafa',
-                    100: '#f5f5f5',
-                    200: '#e5e5e5',
-                    300: '#d4d4d4',
-                    400: '#a3a3a3',
-                    500: '#737373',
-                    600: '#525252',
-                    700: '#404040',
-                    800: '#262626',
-                    900: '#171717',
-                    950: '#0a0a0a',
-                }
+                accent: {
+                    blue: '#3b82f6',
+                    cyan: '#06b6d4',
+                },
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],
-                display: ['Tomorrow', 'Inter', 'system-ui', 'sans-serif'],
-                project: ['Caveat', 'cursive'],
+                display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
             },
             backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'grid-faint': `linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px)`,
+            },
+            backgroundSize: {
+                grid: '32px 32px',
+            },
+            animation: {
+                'grid-drift': 'gridDrift 24s linear infinite',
+                'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                'scan-line': 'scanLine 8s ease-in-out infinite',
+            },
+            keyframes: {
+                gridDrift: {
+                    '0%': { backgroundPosition: '0 0, 0 0' },
+                    '100%': { backgroundPosition: '48px 48px, 48px 48px' },
+                },
+                pulseSlow: {
+                    '0%, 100%': { opacity: '0.4' },
+                    '50%': { opacity: '0.85' },
+                },
+                scanLine: {
+                    '0%, 100%': { transform: 'translateY(-100%)' },
+                    '50%': { transform: 'translateY(100%)' },
+                },
             },
         },
     },
