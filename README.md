@@ -32,7 +32,7 @@ I’m a Full Stack Developer focused on building clean, performant, and scalable
 ## 🌐 Connect With Me
 
 - LinkedIn: https://www.linkedin.com/in/mazenyassien/
-- Portfolio: https://mazenmagdy.vercel.app/
+- Portfolio: https://mazenyassien.me/
 - Email: mazenyassien.dev@gmail.com
 
 ---
