@@ -1,25 +1,42 @@
-# Mazen Yassien — IT portfolio (source)
+# Mazen Magdy 👋
 
-Professional portfolio site for **IT Help Desk Engineer** roles: IT support, service operations, and security-aware operations.
-
-- **Live site:** [mazenyassien.me](https://mazenyassien.me/)
-- **Stack:** Vite, Tailwind CSS, React Router
-
-## Local development
-
-Add your CV as **`public/Mazen_Yassien_CV.pdf`** so the hero “Download CV” link serves the file.
-
-```bash
-npm install
-npm run dev
+```txt
+Full Stack Developer | Computer Science Graduate
+Building scalable and modern web applications
 ```
 
-```bash
-npm run build
-npm run preview
-```
+I’m a Full Stack Developer focused on building clean, performant, and scalable web applications using modern JavaScript ecosystems and backend technologies.
 
-## Contact
+---
 
+## ⚡ Tech Stack
+
+### Frontend
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind" />
+</p>
+
+### Backend
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,dotnet" />
+</p>
+
+### Tools
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,postman" />
+</p>
+
+---
+
+
+## 🌐 Connect With Me
+
+- LinkedIn: https://www.linkedin.com/in/mazenyassien/
+- Portfolio: https://mazenmagdy.vercel.app/
 - Email: mazenyassien.dev@gmail.com
-- LinkedIn: [linkedin.com/in/mazenyassien](https://www.linkedin.com/in/mazenyassien/)
+
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mazenmagdy&label=Profile%20Views&style=flat&color=111111" />
+</p>
