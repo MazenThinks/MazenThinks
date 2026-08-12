@@ -1,6 +1,8 @@
 import Hero from '../components/Hero';
+import AboutSection from '../components/AboutSection';
 import ExperienceTimeline from '../components/ExperienceTimeline';
 import TechStackBadges from '../components/TechStackBadges';
+import ProjectsSection from '../components/ProjectsSection';
 import CertificationsTraining from '../components/CertificationsTraining';
 import EducationSection from '../components/EducationSection';
 import ContactSection from '../components/ContactSection';
@@ -21,53 +23,77 @@ export default function Home() {
         <>
             <Hero contact={CONTACT} />
 
-            <section id="experience" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="about" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+                <div className="container-page">
+                    <RevealSection>
+                        <SectionHeading eyebrow="Profile" title="About" />
+                        <p className="section-subtitle">
+                            IT Help Desk and technical support professional focused on Windows, Active Directory, and
+                            enterprise infrastructure.
+                        </p>
+                        <AboutSection />
+                    </RevealSection>
+                </div>
+            </section>
+
+            <section id="experience" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Work history" title="Experience" />
                         <p className="section-subtitle">
-                            Service desk delivery in a global logistics environment — identity, endpoints, and operational
-                            rigor.
+                            Enterprise environment experience spanning IT support operations, Active Directory
+                            administration, and IT asset management.
                         </p>
                         <ExperienceTimeline />
                     </RevealSection>
                 </div>
             </section>
 
-            <section id="skills" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+            <section id="skills" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
-                        <SectionHeading eyebrow="Toolbox" title="Tech Stack & Skills" />
+                        <SectionHeading eyebrow="Capabilities" title="Skills" />
                         <p className="section-subtitle">
-                            Core platforms and day-to-day tooling — identity, endpoints, and disciplined operations.
+                            Core skills for IT Help Desk, desktop support, systems administration, and networking roles.
                         </p>
                         <TechStackBadges />
                     </RevealSection>
                 </div>
             </section>
 
-            <section id="certifications" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="projects" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
-                        <SectionHeading eyebrow="Credentials" title="Certifications & Training" />
+                        <SectionHeading eyebrow="Hands-on labs" title="Projects" />
                         <p className="section-subtitle">
-                            Industry certifications plus structured coursework aligned to security and infrastructure
-                            practice.
+                            Enterprise IT labs demonstrating real-world Windows Server, Active Directory, and networking
+                            skills.
                         </p>
-                        <CertificationsTraining />
+                        <ProjectsSection />
                     </RevealSection>
                 </div>
             </section>
 
-            <section id="education" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+            <section id="education" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Academic" title="Education" />
                         <p className="section-subtitle">
-                            Bachelor&apos;s in Computer Science &amp; Information Technology — strong academic record and
-                            applied project work.
+                            Computer Science &amp; Information Technology graduate with a strong academic record.
                         </p>
                         <EducationSection />
+                    </RevealSection>
+                </div>
+            </section>
+
+            <section id="certifications" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+                <div className="container-page">
+                    <RevealSection>
+                        <SectionHeading eyebrow="Credentials" title="Certifications & Training" />
+                        <p className="section-subtitle">
+                            Industry certifications and structured training in IT support, networking, and cybersecurity.
+                        </p>
+                        <CertificationsTraining />
                     </RevealSection>
                 </div>
             </section>
@@ -77,7 +103,8 @@ export default function Home() {
                     <RevealSection>
                         <SectionHeading eyebrow="Contact" title="Get In Touch" />
                         <p className="section-subtitle">
-                            Open to IT Support, Helpdesk, and Cybersecurity opportunities.
+                            Open to IT Help Desk, IT Support, Technical Support, Systems Administration, and IT
+                            Infrastructure opportunities.
                         </p>
                         <ContactSection contact={CONTACT} />
                     </RevealSection>

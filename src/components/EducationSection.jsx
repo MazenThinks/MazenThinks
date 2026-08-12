@@ -1,8 +1,8 @@
 import { GraduationCap } from 'lucide-react';
 
 const ACHIEVEMENTS = [
-    '🏆 Graduation project selected as Best Project of the Year',
-    '🌍 Represented the university at the International Undergraduate Research Conference (IUGRC)',
+    'Graduation project recognized as Best Project of the Year',
+    'Selected to represent the university at the International Undergraduate Research Conference (IUGRC)',
 ];
 
 export default function EducationSection() {
@@ -25,9 +25,9 @@ export default function EducationSection() {
                     <dl className="mt-5 grid gap-2 text-sm text-slate-400 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-2">
                         <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-2">
                             <dt className="shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-500">
-                                Graduation
+                                Duration
                             </dt>
-                            <dd className="text-slate-300">June 2025</dd>
+                            <dd className="text-slate-300">10/2022 – 06/2025</dd>
                         </div>
                         <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-2">
                             <dt className="shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-500">

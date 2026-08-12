@@ -68,7 +68,9 @@ export default function ContactForm() {
     return (
         <div className="card-surface p-6 sm:p-8 border-slate-700/80">
             <h3 className="font-display font-semibold text-white text-lg">Send a message</h3>
-            <p className="mt-1 text-sm text-slate-500">I will respond as soon as I can.</p>
+            <p className="mt-1 text-sm text-slate-500">
+                Interested in IT Support, Help Desk, or Systems Administration roles? Reach out.
+            </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div>
@@ -115,7 +117,7 @@ export default function ContactForm() {
                         value={message}
                         onChange={onFieldChange(setMessage)}
                         className="w-full resize-y rounded-lg border border-slate-600 bg-slate-900/50 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 outline-none transition-colors focus:border-accent-blue focus:ring-1 focus:ring-accent-blue/50"
-                        placeholder="How can I help?"
+                        placeholder="Tell me about the IT Support or Help Desk role…"
                     />
                 </div>
 

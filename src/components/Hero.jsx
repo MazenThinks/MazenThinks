@@ -1,24 +1,24 @@
 import { useCallback } from 'react';
 import HeroBackdrop from './HeroBackdrop';
 import { useTypewriterCycle } from '../hooks/useTypewriterCycle';
-import { CV_PATH } from '../constants/site';
 
 const TYPEWRITER_PHRASES = [
     'IT Help Desk Engineer',
-    'CompTIA A+ & Security+ Certified',
-    'Active Directory & Network Support',
+    'L1/L2 Technical Support',
+    'Active Directory & Windows Server',
+    'IT Infrastructure & Networking',
 ];
 
 const BIO =
-    'IT Help Desk Engineer with hands-on experience managing 100+ Active Directory accounts, resolving L1/L2 tickets, and deploying OS images at scale. CompTIA A+ and Security+ certified. 3.8 GPA in Computer Science.';
+    'Delivering L1/L2 technical support across Windows 10/11, Active Directory, Windows Server, and enterprise networking — with hands-on experience in IT infrastructure, OS imaging, and systems administration.';
 
 export default function Hero({ contact }) {
     const typed = useTypewriterCycle(TYPEWRITER_PHRASES);
 
-    const scrollToContact = useCallback((e) => {
+    const scrollTo = useCallback((id) => (e) => {
         e.preventDefault();
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', '#contact');
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', `#${id}`);
     }, []);
 
     return (
@@ -46,15 +46,22 @@ export default function Hero({ contact }) {
 
                 <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4 animate-[heroFadeInUp_1.05s_ease-out_0.14s_both]">
                     <a
-                        href={CV_PATH}
-                        download="Mazen_Yassien_CV.pdf"
+                        href="#experience"
+                        onClick={scrollTo('experience')}
                         className="inline-flex items-center justify-center min-w-[10.5rem] px-6 py-3 rounded-lg bg-accent-blue text-white font-semibold text-sm hover:bg-blue-500 transition-colors shadow-lg shadow-accent-blue/25"
                     >
-                        Download CV
+                        View My Experience
+                    </a>
+                    <a
+                        href="#projects"
+                        onClick={scrollTo('projects')}
+                        className="inline-flex items-center justify-center min-w-[10.5rem] px-6 py-3 rounded-lg border border-slate-600 text-slate-100 font-semibold text-sm hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+                    >
+                        Explore My Projects
                     </a>
                     <a
                         href="#contact"
-                        onClick={scrollToContact}
+                        onClick={scrollTo('contact')}
                         className="inline-flex items-center justify-center min-w-[10.5rem] px-6 py-3 rounded-lg border border-slate-600 text-slate-100 font-semibold text-sm hover:border-accent-cyan hover:text-accent-cyan transition-colors"
                     >
                         Contact Me

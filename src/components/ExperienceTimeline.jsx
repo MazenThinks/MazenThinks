@@ -1,32 +1,31 @@
-import { User, Monitor, Wrench, Clipboard, FileText } from 'lucide-react';
+import { Wrench, Clipboard, BarChart3, FileText } from 'lucide-react';
 
 const HIGHLIGHTS = [
     {
-        icon: User,
-        text: 'Managed 100+ Active Directory user accounts — onboarding, offboarding, and GPO assignments',
-    },
-    {
-        icon: Monitor,
-        text: 'Deployed and configured OS images across company devices ensuring production-ready hardware at scale',
-    },
-    {
         icon: Wrench,
-        text: 'Diagnosed and resolved L1/L2 hardware, software, and network issues with fast ticket resolution and minimal downtime',
+        text: 'Delivered L1/L2 technical support by troubleshooting Windows 10/11 workstations, resolving end-user issues, and administering Active Directory user accounts, including account provisioning and password resets.',
+        emphasize: true,
     },
     {
         icon: Clipboard,
-        text: 'Maintained IT asset records and conducted audits to track device lifecycles',
+        text: 'Managed IT asset inventory using Microsoft Excel to track device lifecycles, identify discrepancies, and support IT infrastructure audits.',
+        emphasize: false,
+    },
+    {
+        icon: BarChart3,
+        text: 'Developed dashboards and reports providing visibility into IT asset inventory, utilization, and operational performance.',
+        emphasize: false,
     },
     {
         icon: FileText,
-        text: 'Documented support resolutions and technical procedures for team knowledge sharing',
+        text: 'Generated data-driven reports supporting IT asset management, infrastructure planning, and operational decision-making.',
+        emphasize: false,
     },
 ];
 
 export default function ExperienceTimeline() {
     return (
         <div className="relative mt-8 md:mt-10 flex gap-5 sm:gap-8">
-            {/* Left rail: vertical line + glowing entry node */}
             <div className="relative shrink-0 w-8 sm:w-10 flex flex-col items-center" aria-hidden>
                 <div className="absolute left-1/2 top-3 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-accent-blue via-accent-blue/45 to-slate-700/30" />
                 <div className="relative z-10 mt-2 flex items-center justify-center">
@@ -38,24 +37,44 @@ export default function ExperienceTimeline() {
             <div className="min-w-0 flex-1 pb-2">
                 <header className="border-b border-slate-700/80 pb-6">
                     <p className="text-accent-cyan text-sm font-semibold tracking-wide">Aramex Egypt</p>
-                    <h3 className="mt-2 font-display text-xl sm:text-2xl font-bold text-white">IT Help Desk Engineer</h3>
+                    <h3 className="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Data Analyst</h3>
                     <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
-                        <span className="text-slate-400">Sep 2025 – Dec 2025</span>
+                        <span className="text-slate-400">09/2025 – 12/2025</span>
                         <span className="hidden sm:inline text-slate-600" aria-hidden>
                             ·
                         </span>
                         <span>Cairo, Egypt</span>
                     </div>
+                    <p className="mt-4 max-w-2xl text-sm text-slate-400 leading-relaxed">
+                        Official role: Data Analyst — with hands-on L1/L2 IT support, Windows 10/11 troubleshooting, and
+                        Active Directory administration in an enterprise environment.
+                    </p>
                 </header>
 
                 <ul className="mt-8 space-y-4 list-none p-0 m-0">
-                    {HIGHLIGHTS.map(({ icon: Icon, text }) => (
+                    {HIGHLIGHTS.map(({ icon: Icon, text, emphasize }) => (
                         <li key={text}>
-                            <article className="card-surface p-4 sm:p-5 flex gap-4 sm:gap-5 border-accent-blue/10 hover:border-accent-blue/25 transition-colors">
-                                <div className="shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent-blue/10 flex items-center justify-center text-accent-cyan" aria-hidden>
+                            <article
+                                className={`card-surface p-4 sm:p-5 flex gap-4 sm:gap-5 transition-colors ${
+                                    emphasize
+                                        ? 'border-accent-blue/25 hover:border-accent-blue/40'
+                                        : 'border-accent-blue/10 hover:border-accent-blue/25'
+                                }`}
+                            >
+                                <div
+                                    className="shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent-blue/10 flex items-center justify-center text-accent-cyan"
+                                    aria-hidden
+                                >
                                     <Icon className="w-5 h-5 sm:w-[1.35rem] sm:h-[1.35rem]" strokeWidth={1.75} />
                                 </div>
-                                <p className="text-sm sm:text-[0.9375rem] text-slate-300 leading-relaxed pt-0.5">{text}</p>
+                                <div className="min-w-0 pt-0.5">
+                                    {emphasize && (
+                                        <p className="mb-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-accent-cyan">
+                                            IT Support
+                                        </p>
+                                    )}
+                                    <p className="text-sm sm:text-[0.9375rem] text-slate-300 leading-relaxed">{text}</p>
+                                </div>
                             </article>
                         </li>
                     ))}

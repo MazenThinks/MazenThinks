@@ -1,44 +1,91 @@
 import {
-    Laptop,
-    Server,
-    Terminal,
-    Users,
-    SlidersHorizontal,
-    Network,
-    ScreenShare,
     Headset,
-    Ticket,
-    UserRoundPlus,
+    MonitorSmartphone,
+    Wrench,
     Layers,
     Package,
+    Ticket,
+    ClipboardList,
+    ScreenShare,
+    Laptop,
+    Server,
+    Users,
+    SlidersHorizontal,
+    UserRound,
+    FolderTree,
+    KeyRound,
+    MonitorPlay,
+    Network,
+    Binary,
+    Globe,
+    Router,
+    Cable,
+    Shield,
+    Waypoints,
+    Activity,
+    Route,
+    Boxes,
+    Box,
+    Settings2,
+    Terminal,
 } from 'lucide-react';
 
 const CATEGORIES = [
     {
-        title: 'Systems & Infrastructure',
+        title: 'IT Support',
+        skills: [
+            { label: 'L1/L2 Technical Support', Icon: Headset },
+            { label: 'Desktop Support', Icon: MonitorSmartphone },
+            { label: 'Hardware & Software Troubleshooting', Icon: Wrench },
+            { label: 'OS Imaging & Deployment', Icon: Layers },
+            { label: 'Device Deployment', Icon: Package },
+            { label: 'Ticket Management', Icon: Ticket },
+            { label: 'IT Asset Management', Icon: ClipboardList },
+            { label: 'Remote Support', Icon: ScreenShare },
+        ],
+    },
+    {
+        title: 'Windows & Systems Administration',
+        skills: [
+            { label: 'Windows 10/11', Icon: Laptop },
+            { label: 'Windows Server', Icon: Server },
+            { label: 'Active Directory Domain Services (AD DS)', Icon: Users },
+            { label: 'Group Policy (GPO)', Icon: SlidersHorizontal },
+            { label: 'User & Group Management', Icon: UserRound },
+            { label: 'Organizational Units (OUs)', Icon: FolderTree },
+            { label: 'Password & Access Management', Icon: KeyRound },
+            { label: 'Remote Desktop Services (RDP)', Icon: MonitorPlay },
+        ],
+    },
+    {
+        title: 'Networking',
+        skills: [
+            { label: 'TCP/IP', Icon: Network },
+            { label: 'IPv4 Addressing & Subnetting', Icon: Binary },
+            { label: 'DNS', Icon: Globe },
+            { label: 'DHCP', Icon: Router },
+            { label: 'DNS & DHCP Troubleshooting', Icon: Wrench },
+            { label: 'Network Connectivity Troubleshooting', Icon: Cable },
+            { label: 'VPN Support', Icon: Shield },
+            { label: 'Switching & Routing Fundamentals', Icon: Waypoints },
+            { label: 'Ping & Traceroute', Icon: Activity },
+            { label: 'LAN/WAN Fundamentals', Icon: Route },
+        ],
+    },
+    {
+        title: 'Virtualization',
+        skills: [
+            { label: 'VMware Workstation', Icon: Boxes },
+            { label: 'Virtual Machine Deployment', Icon: Box },
+            { label: 'Virtual Network Configuration', Icon: Settings2 },
+        ],
+    },
+    {
+        title: 'Operating Systems',
         skills: [
             { label: 'Windows 10/11', Icon: Laptop },
             { label: 'Windows Server', Icon: Server },
             { label: 'Linux', Icon: Terminal },
-        ],
-    },
-    {
-        title: 'Networking & Security',
-        skills: [
-            { label: 'Active Directory', Icon: Users },
-            { label: 'Group Policy (GPO)', Icon: SlidersHorizontal },
-            { label: 'Network Troubleshooting', Icon: Network },
-            { label: 'Remote Desktop Support', Icon: ScreenShare },
-        ],
-    },
-    {
-        title: 'Support & Operations',
-        skills: [
-            { label: 'L1/L2 Helpdesk', Icon: Headset },
-            { label: 'Ticket Management', Icon: Ticket },
-            { label: 'User Onboarding & Offboarding', Icon: UserRoundPlus },
-            { label: 'OS Imaging & Deployment', Icon: Layers },
-            { label: 'IT Asset Management', Icon: Package },
         ],
     },
 ];
@@ -72,7 +119,7 @@ export default function TechStackBadges() {
                         role="list"
                     >
                         {category.skills.map(({ label, Icon }) => (
-                            <SkillBadge key={label} label={label} Icon={Icon} />
+                            <SkillBadge key={`${category.title}-${label}`} label={label} Icon={Icon} />
                         ))}
                     </div>
                 </div>

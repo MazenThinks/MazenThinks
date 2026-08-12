@@ -3,10 +3,11 @@ import { CV_PATH } from '../constants/site';
 
 const navItems = [
     { label: 'Home', href: '#hero' },
+    { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Certifications', href: '#certifications' },
-    { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
 ];
 
@@ -38,16 +39,8 @@ export default function Navbar() {
                     : 'bg-transparent border-b border-transparent'
             }`}
         >
-            <nav className="container-page flex items-center justify-between gap-3 h-16 sm:h-[4.25rem]">
-                <a
-                    href="#hero"
-                    onClick={(e) => scrollToHash(e, '#hero')}
-                    className="font-display font-semibold text-white tracking-tight text-sm sm:text-base shrink-0"
-                >
-                    Mazen Yassien
-                </a>
-
-                <ul className="hidden lg:flex items-center flex-wrap justify-end gap-0.5 xl:gap-1 flex-1 min-w-0">
+            <nav className="container-page flex items-center justify-center gap-3 h-16 sm:h-[4.25rem]">
+                <ul className="hidden lg:flex items-center flex-wrap justify-center gap-0.5 xl:gap-1">
                     {navItems.map((item) => (
                         <li key={item.href}>
                             <a
@@ -88,7 +81,7 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <div className="flex items-center gap-2 lg:hidden shrink-0">
+                <div className="flex items-center justify-center gap-2 lg:hidden">
                     <a
                         href={CV_PATH}
                         download="Mazen_Yassien_CV.pdf"
