@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollProgress from './components/ScrollProgress';
 import Home from './pages/Home';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
+            <ScrollProgress />
             <div className="flex flex-col min-h-screen">
                 <Navbar />
                 <main

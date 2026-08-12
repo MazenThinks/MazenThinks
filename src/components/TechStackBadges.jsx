@@ -29,6 +29,7 @@ import {
     Settings2,
     Terminal,
 } from 'lucide-react';
+import { RevealItem } from './RevealSection';
 
 const CATEGORIES = [
     {
@@ -93,7 +94,7 @@ const CATEGORIES = [
 function SkillBadge({ label, Icon }) {
     return (
         <div
-            className="group flex items-center gap-2.5 rounded-full border border-slate-600/90 bg-surface/80 backdrop-blur-sm px-4 py-2.5 sm:px-4 sm:py-3 text-sm text-slate-200 transition-all duration-300 ease-out hover:border-accent-cyan/55 hover:bg-slate-800/90 hover:shadow-[0_0_28px_-6px_rgba(59,130,246,0.55),0_0_36px_-12px_rgba(6,182,212,0.35)]"
+            className="group flex items-center gap-2.5 rounded-full border border-slate-600/90 bg-surface/80 backdrop-blur-sm px-4 py-2.5 sm:px-4 sm:py-3 text-sm text-slate-200 transition-all duration-300 ease-out hover:border-accent-cyan/55 hover:bg-slate-800/90 hover:shadow-[0_0_28px_-6px_rgba(59,130,246,0.55),0_0_36px_-12px_rgba(6,182,212,0.35)] hover:-translate-y-0.5"
             role="listitem"
         >
             <Icon
@@ -109,8 +110,8 @@ function SkillBadge({ label, Icon }) {
 export default function TechStackBadges() {
     return (
         <div className="mt-6 sm:mt-8 space-y-10 sm:space-y-12">
-            {CATEGORIES.map((category) => (
-                <div key={category.title}>
+            {CATEGORIES.map((category, categoryIndex) => (
+                <RevealItem key={category.title} delayMs={Math.min(categoryIndex * 60, 180)}>
                     <h3 className="font-display font-semibold text-white text-base sm:text-lg tracking-tight border-l-2 border-accent-blue pl-3 mb-4 sm:mb-5">
                         {category.title}
                     </h3>
@@ -118,11 +119,17 @@ export default function TechStackBadges() {
                         className="grid gap-3 sm:gap-3.5 [grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))]"
                         role="list"
                     >
-                        {category.skills.map(({ label, Icon }) => (
-                            <SkillBadge key={`${category.title}-${label}`} label={label} Icon={Icon} />
+                        {category.skills.map(({ label, Icon }, skillIndex) => (
+                            <RevealItem
+                                key={`${category.title}-${label}`}
+                                delayMs={Math.min(skillIndex * 35, 240)}
+                                variant="soft"
+                            >
+                                <SkillBadge label={label} Icon={Icon} />
+                            </RevealItem>
                         ))}
                     </div>
-                </div>
+                </RevealItem>
             ))}
         </div>
     );

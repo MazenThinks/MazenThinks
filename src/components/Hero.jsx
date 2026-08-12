@@ -1,6 +1,7 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import HeroBackdrop from './HeroBackdrop';
 import { useTypewriterCycle } from '../hooks/useTypewriterCycle';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
 const TYPEWRITER_PHRASES = [
     'IT Help Desk Engineer',
@@ -14,6 +15,10 @@ const BIO =
 
 export default function Hero({ contact }) {
     const typed = useTypewriterCycle(TYPEWRITER_PHRASES);
+    const reduced = usePrefersReducedMotion();
+    const sectionRef = useRef(null);
+    const contentRef = useRef(null);
+    const backdropRef = useRef(null);
 
     const scrollTo = useCallback((id) => (e) => {
         e.preventDefault();
@@ -21,13 +26,60 @@ export default function Hero({ contact }) {
         history.replaceState(null, '', `#${id}`);
     }, []);
 
+    useEffect(() => {
+        if (reduced) return undefined;
+
+        let raf = 0;
+        const update = () => {
+            raf = 0;
+            const section = sectionRef.current;
+            const content = contentRef.current;
+            const backdrop = backdropRef.current;
+            if (!section || !content) return;
+
+            const rect = section.getBoundingClientRect();
+            const travel = Math.max(1, rect.height * 0.7);
+            const p = Math.min(1, Math.max(0, -rect.top / travel));
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            const y = p * (isMobile ? 12 : 28);
+            const opacity = 1 - p * (isMobile ? 0.28 : 0.42);
+
+            content.style.transform = `translate3d(0, ${y}px, 0)`;
+            content.style.opacity = String(opacity);
+            if (backdrop) {
+                backdrop.style.transform = `translate3d(0, ${p * (isMobile ? 6 : 14)}px, 0)`;
+                backdrop.style.opacity = String(1 - p * 0.25);
+            }
+        };
+
+        const onScroll = () => {
+            if (raf) return;
+            raf = requestAnimationFrame(update);
+        };
+
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+            if (raf) cancelAnimationFrame(raf);
+        };
+    }, [reduced]);
+
     return (
         <section
             id="hero"
+            ref={sectionRef}
             className="scroll-mt-20 relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center overflow-hidden bg-surface-deepest"
         >
-            <HeroBackdrop />
-            <div className="container-page relative z-10 py-16 sm:py-24">
+            <div ref={backdropRef} className="absolute inset-0 will-change-transform">
+                <HeroBackdrop />
+            </div>
+            <div
+                ref={contentRef}
+                className="container-page relative z-10 py-16 sm:py-24 will-change-transform"
+            >
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight max-w-4xl animate-[heroFadeInUp_0.85s_ease-out_both]">
                     Mazen Yassien
                 </h1>

@@ -1,4 +1,5 @@
 import { Shield, Award, BookOpen } from 'lucide-react';
+import { RevealItem } from './RevealSection';
 
 const CERTIFICATIONS = [
     { title: 'CompTIA A+', issuer: 'CompTIA', Icon: Shield },
@@ -58,7 +59,6 @@ function CourseRow({ title, issuer }) {
 export default function CertificationsTraining() {
     return (
         <div className="mt-6 sm:mt-8 grid gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-            {/* Certifications — primary column */}
             <div>
                 <div className="flex flex-wrap items-center gap-3">
                     <h3 className="font-display text-lg sm:text-xl font-bold text-white tracking-tight">Certifications</h3>
@@ -68,19 +68,22 @@ export default function CertificationsTraining() {
                     </span>
                 </div>
                 <div className="mt-6 flex flex-col gap-4 sm:gap-5">
-                    {CERTIFICATIONS.map((c) => (
-                        <CertificationCard key={c.title} {...c} />
+                    {CERTIFICATIONS.map((c, index) => (
+                        <RevealItem key={c.title} delayMs={index * 70} variant="soft">
+                            <CertificationCard {...c} />
+                        </RevealItem>
                     ))}
                 </div>
             </div>
 
-            {/* Training & courses — secondary column */}
             <div>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-white tracking-tight">Training & Courses</h3>
                 <ul className="mt-6 flex flex-col gap-2.5 sm:gap-3 list-none p-0 m-0">
-                    {COURSES.map((row) => (
+                    {COURSES.map((row, index) => (
                         <li key={row.title}>
-                            <CourseRow {...row} />
+                            <RevealItem delayMs={Math.min(index * 45, 200)}>
+                                <CourseRow {...row} />
+                            </RevealItem>
                         </li>
                     ))}
                 </ul>

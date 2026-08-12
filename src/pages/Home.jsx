@@ -22,8 +22,9 @@ export default function Home() {
     return (
         <>
             <Hero contact={CONTACT} />
+            <div className="section-bridge" aria-hidden />
 
-            <section id="about" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="about" className="scroll-mt-20 section-y bg-surface border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Profile" title="About" />
@@ -35,8 +36,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="experience" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+            <section id="experience" className="scroll-mt-20 section-y bg-surface-deepest border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Work history" title="Experience" />
@@ -48,8 +50,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="skills" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="skills" className="scroll-mt-20 section-y bg-surface border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Capabilities" title="Skills" />
@@ -60,8 +63,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="projects" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+            <section id="projects" className="scroll-mt-20 section-y bg-surface-deepest border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Hands-on labs" title="Projects" />
@@ -73,8 +77,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="education" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="education" className="scroll-mt-20 section-y bg-surface border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Academic" title="Education" />
@@ -85,8 +90,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="certifications" className="scroll-mt-20 section-y bg-surface-deepest border-y border-slate-800/80">
+            <section id="certifications" className="scroll-mt-20 section-y bg-surface-deepest border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Credentials" title="Certifications & Training" />
@@ -97,8 +103,9 @@ export default function Home() {
                     </RevealSection>
                 </div>
             </section>
+            <div className="section-bridge" aria-hidden />
 
-            <section id="contact" className="scroll-mt-20 section-y bg-surface border-y border-slate-800/80">
+            <section id="contact" className="scroll-mt-20 section-y bg-surface border-b border-slate-800/80">
                 <div className="container-page">
                     <RevealSection>
                         <SectionHeading eyebrow="Contact" title="Get In Touch" />
